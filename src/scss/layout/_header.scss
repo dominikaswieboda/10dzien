@@ -1,0 +1,144 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: $transition-base;
+  background-color: $color-white;
+  z-index: 10;
+  &.active {
+    box-shadow: $box-shadow;
+  }
+  .container {
+    overflow: visible;
+    padding: 0;
+    @include respond-to('small') {
+      padding: 0 15px;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    @include respond-to('small') {
+      padding: 15px 0;
+    }
+  }
+  &__logo {
+    display: block;
+  }
+  &__nav {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      transform: translateY(100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      pointer-events: none;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .6s ease-in-out;
+      overflow: hidden;
+      @include respond-to('small') {
+        position: static;
+        transform: translateY(0);
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: all;
+        cursor: pointer;
+      }
+    &.expand {
+        pointer-events: all;
+        opacity: 1;
+        visibility: visible;
+        max-height: 800px;
+        margin-top: 45px;
+        background-color: $color-light-gray;
+        margin-left: 0;
+      @include respond-to('small') {
+        display: none;
+      }
+    }
+    &__item {
+      color: $color-gray;
+      text-transform: uppercase;
+      position: relative;
+      transition: $transition-base;
+      font-weight: 500;
+      &:hover {
+        color: $color-pink;
+      }
+      &:first-child {
+        margin-top: 20px;
+        @include respond-to('small'){
+          margin-top: 0;
+        }
+      }
+      &:last-child {
+        margin-bottom: 20px;
+        @include respond-to('small'){
+          margin-bottom: 0;
+        }
+      }
+      & + .header__nav__item {
+        margin-left: 0;
+        margin-top: 10px;
+        @include respond-to('small'){
+          margin-left: 20px;
+          margin-top: 0;
+        }
+        @include respond-to('medium'){
+          margin-left: 80px;
+        }
+      }
+      &.active {
+        color: $color-pink;
+      }
+    }
+  }
+  //Hamburger menu
+  &__hamburger {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+    border: 2px solid $color-pink;
+    color: $color-pink;
+    cursor: pointer;
+    @include respond-to('small') {
+      display: none;
+      background: none;
+      border: none;
+      padding: 0;
+      outline: none;
+    }
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      font-size: 20px;
+      &.fas.fa-times {
+        visibility: hidden;
+      }
+    }
+    &.active {
+      i {
+        &.fas.fa-times {
+          visibility: visible;
+        }
+        &.fas.fa-bars {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+}

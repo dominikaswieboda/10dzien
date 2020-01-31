@@ -1,0 +1,11 @@
+.logo {
+  display: inline-block;
+  width: 80px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  @include respond-to('small') {
+    width: 100px;
+  }
+}
