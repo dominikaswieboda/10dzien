@@ -30,6 +30,15 @@
     text-align: center;
   }
   &__image {
-    display: inline-flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 180px;
+    @include respond-to('medium') {
+      min-height: 220px;
+    }
+    @include respond-to('large') {
+      min-height: 380px;
+    }
   }
 }
