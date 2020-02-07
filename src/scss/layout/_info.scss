@@ -1,0 +1,33 @@
+.info {
+  background-image: url("./../../src/images/info/bukiet.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 180px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include respond-to('small') {
+    min-height: 300px;
+  }
+  @include respond-to('medium') {
+    background-attachment: fixed;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  &__content {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,16 @@
+.footer {
+  background-color: $color-pink;
+  color: $color-white;
+  text-align: center;
+  padding: 20px 0;
+  a {
+    color: $color-white;
+    transition: $transition-base;
+    & + a {
+      margin-left: 5px;
+    }
+    &:hover {
+      color: $color-light-gray;
+    }
+  }
+}

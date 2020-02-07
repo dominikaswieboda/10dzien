@@ -1,0 +1,102 @@
+.form {
+  background-color: $color-pink;
+  .bookero-plugin-form {
+    margin: 0;
+    max-width: 100%;
+    .services-section {
+      width: 100%;
+      @include respond-to('small') {
+        width: 50%;
+      }
+      @include respond-to('medium') {
+        width: 33.3%;
+      }
+    }
+    .bookero-plugin-form-heading {
+      font-weight: 700;
+    }
+    .inquiry-actions, .inquiry-heading {
+      display: none;
+    }
+    .required-fields-notice {
+      color: $color-black;
+      font-weight: 700;
+    }
+    .dates-section {
+      .calendar-days-list-cell.is-valid {
+        color: $color-gray;
+      }
+      .calendar-days-list-cell.is-selected {
+        background-color: $color-light-gray;
+        border-color: $color-gray;
+      }
+    }
+    .hours-section {
+      .hours-wrapper {
+        .hours-list {
+          .hours-list-item {
+            color: $color-gray;
+            &.is-selected {
+              background-color: $color-light-gray;
+              border-color: $color-gray;
+              color: $color-gray;
+            }
+          }
+        }
+      }
+    }
+    .bookero-plugin-header {
+      background-color: transparent;
+    }
+    .submit-section {
+      .submit-button {
+        color: $color-white;
+        background-color: $color-gray;
+        border: 3px solid $color-pink;
+        padding: 15px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: $transition-base;
+        display: inline-block;
+        text-align: center;
+        font-weight: 700;
+        &:hover, &:focus {
+          background-color: $color-light-gray;
+        }
+        &::after {
+          display: none;
+        }
+      }
+      .back-button {
+        color: $color-gray;
+        transition: $transition-base;
+        &:hover {
+          color: $color-light-gray;
+        }
+      }
+    }
+    .dates-section {
+      .calendar-days-list-cell.is-valid {
+        color: $color-gray;
+      }
+      .calendar-days-list-cell.is-selected {
+        background-color: $color-light-gray;
+        border-color: $color-gray;
+      }
+    }
+    .hours-section {
+      .hours-wrapper {
+        .hours-list {
+          .hours-list-item {
+            color: $color-gray;
+            &.is-selected {
+              background-color: $color-light-gray;
+              border-color: $color-gray;
+              color: $color-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}

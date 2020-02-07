@@ -1,0 +1,35 @@
+.cars {
+  span {
+    padding: 10px 0;
+    display: block;
+  }
+  &__items {
+    min-width: 100%;
+    @include respond-to('small') {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    border: 10px solid $color-pink;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 10px;
+    @include respond-to('small') {
+      width: calc((100% / 2) - 10px);
+      margin-top: 20px;
+    }
+    @include respond-to('large') {
+      width: calc((100% / 2) - 20px);
+      margin-top: 40px;
+    }
+  }
+  &__description {
+    padding: 10px;
+    text-align: center;
+  }
+  &__image {
+    display: inline-flex;
+  }
+}

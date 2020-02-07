@@ -20,12 +20,17 @@
 @import
   'layout/header',
   'layout/banner',
-  'layout/about';
+  'layout/about',
+  'layout/info',
+  'layout/cars',
+  'layout/form',
+  'layout/contact',
+  'layout/footer';
 // 5. Components
 @import
   'components/button',
   'components/logo',
-  'components/card';
+  'components/social-media';
 
 // 6. Page-specific styles
 @import

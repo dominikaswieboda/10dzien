@@ -45,3 +45,12 @@ img {
 a {
   text-decoration: none;
 }
+
+section {
+  &:not(:first-child) {
+    padding: 30px 0;
+    @include respond-to('medium') {
+      padding: 100px 0;
+    }
+  }
+}

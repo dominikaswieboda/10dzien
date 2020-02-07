@@ -16,12 +16,19 @@ button{
   cursor: pointer;
   border-radius: 2px;
   transition: $transition-base;
-  display: block;
+  display: inline-block;
   text-align: center;
   font-weight: 700;
   &:hover {
     background-color: $color-light-gray;
     color: $color-white;
     border-color: $color-light-gray;
+  }
+  &--hover-secondary {
+    &:hover {
+      background-color: $color-white;
+      color: $color-gray;
+      border-color: $color-pink;
+    }
   }
 }
